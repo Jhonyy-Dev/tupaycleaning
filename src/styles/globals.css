@@ -69,3 +69,26 @@
     text-wrap: balance;
   }
 }
+
+/* GPU-composited float animation for floating action buttons */
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+.float-btn,
+.float-btn-delayed {
+  animation: floatY 3s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.float-btn-delayed {
+  animation-delay: 0.5s;
+}
