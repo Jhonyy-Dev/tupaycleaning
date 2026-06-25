@@ -6,7 +6,7 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tupaycleani
 export const CONTACT = {
   phone: '+1 (929) 549-3683',
   phoneHref: 'tel:+19295493683',
-  email: 'info@tupaycleaning.com',
+  email: 'contact@tupaycleaning.com',
   whatsapp: 'https://wa.me/19295493683',
   address: 'Serving New York & the Tri-State Area',
   hours: 'Monday to Saturday: 7:00 AM - 7:00 PM',
