@@ -7,7 +7,7 @@ export default function FloatingButtons() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
       <a
         href={CONTACT.phoneHref}
-        className="block w-14 h-14 transition-transform duration-300 hover:scale-125 active:scale-95 animate-[float_3s_ease-in-out_infinite]"
+        className="block w-14 h-14 will-change-transform [backface-visibility:hidden] transition-transform duration-300 hover:scale-125 active:scale-95 animate-[float_3s_ease-in-out_infinite]"
         aria-label="Call us"
         title={CONTACT.phone}
       >
@@ -24,7 +24,7 @@ export default function FloatingButtons() {
         href={CONTACT.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-14 h-14 transition-transform duration-300 hover:scale-125 active:scale-95 animate-[float_3s_ease-in-out_infinite_0.5s]"
+        className="block w-14 h-14 will-change-transform [backface-visibility:hidden] transition-transform duration-300 hover:scale-125 active:scale-95 animate-[float_3s_ease-in-out_infinite_0.5s]"
         aria-label="Chat on WhatsApp"
         title={`WhatsApp: ${CONTACT.phone}`}
       >
@@ -39,8 +39,8 @@ export default function FloatingButtons() {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-8px); }
+          0%, 100% { transform: translate3d(0, 0, 0); }
+          50% { transform: translate3d(0, -8px, 0); }
         }
       `}</style>
     </div>
