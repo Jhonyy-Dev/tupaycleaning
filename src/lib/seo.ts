@@ -17,37 +17,38 @@ export function generateSEO({
 }: SEOProps = {}) {
   const fullTitle = title
     ? `${title} | ${SITE_NAME} - NYC`
-    : `${SITE_NAME} | House Cleaning, Painting & Renovation Services in New York City`;
+    : `${SITE_NAME} | Residential & Commercial Cleaning in NYC & the Tri-State Area`;
   const url = `${SITE_URL}${path}`;
 
   const defaultKeywords = [
     'house cleaning NYC',
+    'house cleaning New York',
+    'residential cleaning NYC',
+    'home cleaning service New York',
+    'commercial cleaning NYC',
     'office cleaning New York',
     'deep cleaning service NYC',
-    'house painting New York',
-    'interior painting NYC',
-    'exterior painting New York',
-    'home renovation NYC',
-    'apartment renovation New York',
-    'commercial cleaning NYC',
-    'residential cleaning New York',
+    'maid service NYC',
+    'apartment cleaning NYC',
     'move out cleaning NYC',
-    'post construction cleaning',
-    'office painting NYC',
-    'kitchen renovation New York',
-    'bathroom renovation NYC',
-    'property make ready NYC',
+    'move in cleaning New York',
+    'post construction cleaning NYC',
     'Airbnb cleaning NYC',
-    'landlord cleaning service New York',
-    'home remodeling NYC',
+    'recurring cleaning service New York',
     'cleaning company near me',
-    'painting contractor NYC',
-    'renovation contractor New York',
-    'Queens cleaning service',
-    'Brooklyn house cleaning',
-    'Manhattan cleaning service',
-    'Bronx house painting',
-    'Staten Island renovation',
+    'best cleaning service NYC',
+    'house cleaning Manhattan',
+    'house cleaning Brooklyn',
+    'house cleaning Queens',
+    'house cleaning Bronx',
+    'house cleaning Staten Island',
+    'cleaning service Long Island',
+    'cleaning service Westchester',
+    'house cleaning White Plains',
+    'commercial cleaning New Jersey',
+    'cleaning service Connecticut',
+    'house cleaning The Hamptons',
+    'home cleaning tri-state area',
     SITE_NAME,
   ];
 
@@ -98,17 +99,17 @@ export function generateSEO({
 export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
     '@id': `${SITE_URL}/#business`,
     name: SITE_NAME,
     description:
-      'Professional house cleaning, painting and renovation services in New York City. Serving all five boroughs: Manhattan, Brooklyn, Queens, Bronx and Staten Island.',
+      'Premium residential, home and commercial cleaning company serving New York City and the tri-state area: Manhattan, Brooklyn, Queens, the Bronx, Staten Island, Long Island, Westchester (White Plains), New Jersey, Connecticut and The Hamptons.',
     url: SITE_URL,
     telephone: CONTACT.phone,
     email: CONTACT.email,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Queens',
+      addressLocality: 'New York',
       addressRegion: 'NY',
       addressCountry: 'US',
     },
@@ -118,12 +119,18 @@ export function generateLocalBusinessSchema() {
       longitude: -74.006,
     },
     areaServed: [
-      { '@type': 'City', name: 'New York', sameAs: 'https://en.wikipedia.org/wiki/New_York_City' },
-      { '@type': 'Borough', name: 'Manhattan' },
-      { '@type': 'Borough', name: 'Brooklyn' },
-      { '@type': 'Borough', name: 'Queens' },
-      { '@type': 'Borough', name: 'Bronx' },
-      { '@type': 'Borough', name: 'Staten Island' },
+      { '@type': 'City', name: 'New York City', sameAs: 'https://en.wikipedia.org/wiki/New_York_City' },
+      { '@type': 'AdministrativeArea', name: 'Manhattan' },
+      { '@type': 'AdministrativeArea', name: 'Brooklyn' },
+      { '@type': 'AdministrativeArea', name: 'Queens' },
+      { '@type': 'AdministrativeArea', name: 'The Bronx' },
+      { '@type': 'AdministrativeArea', name: 'Staten Island' },
+      { '@type': 'AdministrativeArea', name: 'Long Island' },
+      { '@type': 'AdministrativeArea', name: 'Westchester County' },
+      { '@type': 'City', name: 'White Plains' },
+      { '@type': 'AdministrativeArea', name: 'New Jersey' },
+      { '@type': 'AdministrativeArea', name: 'Fairfield County, Connecticut' },
+      { '@type': 'Place', name: 'The Hamptons' },
     ],
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
@@ -133,9 +140,11 @@ export function generateLocalBusinessSchema() {
     },
     priceRange: '$$',
     image: `${SITE_URL}/images/logo.webp`,
+    logo: `${SITE_URL}/images/logo.webp`,
     sameAs: [
-      'https://instagram.com/mavalhouse',
-      'https://facebook.com/mavalhouse',
+      'https://instagram.com/tupaycleaning',
+      'https://facebook.com/tupaycleaning',
+      'https://g.page/tupaycleaning',
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -143,6 +152,20 @@ export function generateLocalBusinessSchema() {
       reviewCount: '500',
       bestRating: '5',
     },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Maria Rodriguez' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: 'We hired Tupay Cleaning to clean our apartment after a complete renovation. The result was impeccable. Every corner was perfect and the team was extremely professional.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'David Fernandez' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: 'As a property manager of several buildings, I need a reliable and consistent service. Tupay Cleaning always delivers. I recommend them without hesitation.',
+      },
+    ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Cleaning, Painting & Renovation Services',
@@ -153,23 +176,31 @@ export function generateLocalBusinessSchema() {
           itemListElement: [
             {
               '@type': 'Offer',
-              itemOffered: { '@type': 'Service', name: 'Deep House Cleaning NYC', description: 'Professional deep cleaning for houses, apartments and condos in New York City' },
+              itemOffered: { '@type': 'Service', name: 'Residential House Cleaning NYC', description: 'Professional home and apartment cleaning across New York City and the tri-state area' },
             },
             {
               '@type': 'Offer',
-              itemOffered: { '@type': 'Service', name: 'Office Cleaning NYC', description: 'Commercial office and workspace cleaning services in New York' },
+              itemOffered: { '@type': 'Service', name: 'Commercial & Office Cleaning NYC', description: 'Commercial, office and workspace cleaning services in New York and the tri-state area' },
             },
             {
               '@type': 'Offer',
-              itemOffered: { '@type': 'Service', name: 'Post-Construction Cleaning', description: 'Post-construction and renovation cleanup services in NYC' },
+              itemOffered: { '@type': 'Service', name: 'Deep Cleaning NYC', description: 'Detailed deep cleaning for houses, apartments and condos in New York City' },
             },
             {
               '@type': 'Offer',
-              itemOffered: { '@type': 'Service', name: 'Move-Out Cleaning NYC', description: 'Move-in and move-out cleaning services for NYC apartments' },
+              itemOffered: { '@type': 'Service', name: 'Recurring Maid Service NYC', description: 'Weekly, bi-weekly and monthly recurring cleaning plans in New York' },
             },
             {
               '@type': 'Offer',
-              itemOffered: { '@type': 'Service', name: 'Airbnb Cleaning NYC', description: 'Short-term rental turnover cleaning for Airbnb hosts in New York' },
+              itemOffered: { '@type': 'Service', name: 'Move-In / Move-Out Cleaning NYC', description: 'Move-in and move-out cleaning services for NYC apartments and homes' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'Post-Construction Cleaning NYC', description: 'Post-construction and renovation cleanup services in NYC' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: 'Airbnb Turnover Cleaning NYC', description: 'Short-term rental turnover cleaning for Airbnb hosts in New York' },
             },
           ],
         },
@@ -234,7 +265,7 @@ export function generateServiceSchema(name: string, description: string, areaSer
       telephone: CONTACT.phone,
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Queens',
+        addressLocality: 'New York',
         addressRegion: 'NY',
         addressCountry: 'US',
       },
@@ -272,5 +303,48 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
       name: item.name,
       item: `${SITE_URL}${item.url}`,
     })),
+  };
+}
+
+export function generateOrganizationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/images/logo.webp`,
+    image: `${SITE_URL}/images/logo.webp`,
+    telephone: CONTACT.phone,
+    email: CONTACT.email,
+    description:
+      'Premium residential, home and commercial cleaning company serving New York City and the tri-state area.',
+    areaServed: 'New York City and the Tri-State Area',
+    sameAs: [
+      'https://instagram.com/tupaycleaning',
+      'https://facebook.com/tupaycleaning',
+      'https://g.page/tupaycleaning',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: CONTACT.phone,
+      contactType: 'customer service',
+      areaServed: 'US',
+      availableLanguage: ['English', 'Spanish'],
+    },
+  };
+}
+
+export function generateWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: SITE_NAME,
+    description:
+      'Premium residential, home and commercial cleaning across New York City and the tri-state area.',
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    inLanguage: 'en-US',
   };
 }

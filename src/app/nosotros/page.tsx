@@ -5,15 +5,15 @@ import CTASection from '@/components/home/CTASection';
 import NosotrosContent from './NosotrosContent';
 
 export const metadata: Metadata = generateSEO({
-  title: 'About Us - Trusted Cleaning & Renovation Team in NYC',
+  title: 'About Us - Trusted Cleaning Company in NYC & the Tri-State Area',
   description:
-    'Meet the Maval House team — over 6 years of experience providing professional house cleaning, painting, and renovation services across all 5 NYC boroughs. 500+ completed projects, 98% satisfaction rate.',
+    'Meet the Tupay Cleaning team — years of experience delivering premium residential, home and commercial cleaning across NYC and the tri-state area. 500+ completed projects and a 98% client satisfaction rate.',
   path: '/nosotros',
   keywords: [
     'trusted cleaning company NYC',
-    'experienced painters New York',
-    'reliable renovation team NYC',
-    'about Maval House',
+    'residential cleaners New York',
+    'commercial cleaning team tri-state',
+    'about Tupay Cleaning',
   ],
 });
 

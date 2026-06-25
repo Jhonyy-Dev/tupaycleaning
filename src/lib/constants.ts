@@ -1,30 +1,43 @@
-export const SITE_NAME = 'Maval House';
+export const SITE_NAME = 'Tupay Cleaning';
 export const SITE_DESCRIPTION =
-  'Maval House offers professional house cleaning, office cleaning, interior & exterior painting, and home renovation services in New York City. Serving Manhattan, Brooklyn, Queens, Bronx & Staten Island. Free quotes. Call +1 (929) 549-3683.';
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://mavalhouse.com';
+  'Tupay Cleaning is a premium residential, home and commercial cleaning company serving New York and the tri-state area. Deep cleaning, recurring maid service, move-in/move-out, post-construction and Airbnb turnovers. Serving Manhattan, Brooklyn, Queens, Bronx, Staten Island, Long Island, Westchester (White Plains), New Jersey, Connecticut and The Hamptons. Free quotes — call +1 (929) 549-3683.';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tupaycleaning.com';
 
 export const CONTACT = {
   phone: '+1 (929) 549-3683',
   phoneHref: 'tel:+19295493683',
-  email: 'info@mavalhouse.com',
+  email: 'info@tupaycleaning.com',
   whatsapp: 'https://wa.me/19295493683',
-  address: 'Queens, New York, NY',
+  address: 'Serving New York & the Tri-State Area',
   hours: 'Monday to Saturday: 7:00 AM - 7:00 PM',
 } as const;
 
 export const SOCIAL = {
-  instagram: 'https://instagram.com/mavalhouse',
-  facebook: 'https://facebook.com/mavalhouse',
-  google: 'https://g.page/mavalhouse',
+  instagram: 'https://instagram.com/tupaycleaning',
+  facebook: 'https://facebook.com/tupaycleaning',
+  google: 'https://g.page/tupaycleaning',
 } as const;
+
+export const SERVICE_AREAS = [
+  { name: 'Manhattan', description: 'All neighborhoods, from Tribeca to Harlem' },
+  { name: 'Brooklyn', description: 'Park Slope, Williamsburg, DUMBO & more' },
+  { name: 'Queens', description: 'Astoria, Long Island City, Flushing & more' },
+  { name: 'The Bronx', description: 'Riverdale, Fordham, Pelham Bay & more' },
+  { name: 'Staten Island', description: 'All neighborhoods covered' },
+  { name: 'Long Island', description: 'Nassau & Suffolk County' },
+  { name: 'Westchester', description: 'White Plains & surrounding towns' },
+  { name: 'New Jersey', description: 'Hudson, Bergen & Essex County' },
+  { name: 'Connecticut', description: 'Fairfield County & nearby areas' },
+  { name: 'The Hamptons', description: 'East Hampton, Southampton & the East End' },
+] as const;
 
 export const SERVICES = [
   {
     id: 'limpieza',
-    title: 'Deep Cleaning',
+    title: 'Residential & Commercial Cleaning',
     shortTitle: 'Cleaning',
     description:
-      'Residential, commercial and post-construction deep cleaning. Guaranteed impeccable results.',
+      'Home, residential and commercial cleaning done right. Deep cleans, recurring maid service, move-in/move-out, post-construction and Airbnb turnovers with spotless, guaranteed results.',
     href: '/servicios/limpieza',
     image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
   },
@@ -75,7 +88,7 @@ export const TESTIMONIALS = [
     name: 'Maria Rodriguez',
     location: 'Upper West Side, Manhattan',
     service: 'Post-construction cleaning',
-    text: 'We hired Maval House to clean our apartment after a complete renovation. The result was impeccable. Every corner was perfect and the team was extremely professional.',
+    text: 'We hired Tupay Cleaning to clean our apartment after a complete renovation. The result was impeccable. Every corner was perfect and the team was extremely professional.',
     rating: 5,
   },
   {
@@ -107,7 +120,7 @@ export const TESTIMONIALS = [
     name: 'David Fernandez',
     location: 'Jackson Heights, Queens',
     service: 'Deep cleaning',
-    text: 'As a property manager of several buildings, I need a reliable and consistent service. Maval House always delivers. I recommend them without hesitation.',
+    text: 'As a property manager of several buildings, I need a reliable and consistent service. Tupay Cleaning always delivers. I recommend them without hesitation.',
     rating: 5,
   },
 ] as const;

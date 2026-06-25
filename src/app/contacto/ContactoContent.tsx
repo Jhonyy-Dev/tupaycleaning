@@ -138,7 +138,7 @@ export default function ContactoContent() {
                           Select a service
                         </option>
                         <option value="limpieza" className="bg-neutral-900">
-                          Deep Cleaning
+                          Residential & Commercial Cleaning
                         </option>
                         <option value="pintura" className="bg-neutral-900">
                           Painting
@@ -277,10 +277,10 @@ export default function ContactoContent() {
                   <div className="text-center p-8">
                     <MapPin className="w-8 h-8 text-white/20 mx-auto mb-3" />
                     <p className="text-white/40 text-sm">
-                      We serve all NYC boroughs
+                      Serving New York &amp; the Tri-State Area
                     </p>
                     <p className="text-white/20 text-xs mt-1">
-                      Manhattan, Brooklyn, Queens, Bronx, Staten Island
+                      NYC, Long Island, Westchester, New Jersey, Connecticut &amp; The Hamptons
                     </p>
                   </div>
                 </div>

@@ -6,15 +6,15 @@ const milestones = [
   { year: '2018', title: 'Founded', description: 'We started operations in Queens, offering cleaning services to local property owners.' },
   { year: '2019', title: 'Expanded to Brooklyn', description: 'We expanded our services to Brooklyn and added professional painting to our offerings.' },
   { year: '2020', title: 'Renovations Added', description: 'We incorporated renovation and make-ready services, responding to demand from landlords and property managers.' },
-  { year: '2022', title: 'Five Boroughs', description: 'We achieved complete coverage across all five New York boroughs with a team of over 20 professionals.' },
-  { year: '2024', title: '500+ Projects', description: 'We surpassed 500 completed projects with a 98% client satisfaction rate.' },
+  { year: '2022', title: 'Citywide Coverage', description: 'We achieved complete coverage across all five New York boroughs with a growing team of professionals.' },
+  { year: '2024', title: 'Tri-State Expansion', description: 'We expanded beyond NYC to Long Island, Westchester, New Jersey, Connecticut and The Hamptons, surpassing 500 completed projects with a 98% client satisfaction rate.' },
 ];
 
 const stats = [
   { icon: Award, value: '500+', label: 'Projects completed' },
   { icon: Users, value: '20+', label: 'Team professionals' },
   { icon: Calendar, value: '6+', label: 'Years of experience' },
-  { icon: MapPin, value: '5', label: 'Boroughs covered' },
+  { icon: MapPin, value: '10+', label: 'Areas served' },
 ];
 
 const team = [
@@ -74,7 +74,7 @@ export default function NosotrosContent() {
 
       <AnimatedSection className="section-padding">
         <div className="container-wide">
-          <SectionHeader label="Our Journey" title="Our path" description="From Queens to all five boroughs, every year has been a step closer to excellence." />
+          <SectionHeader label="Our Journey" title="Our path" description="From Queens to the entire tri-state area, every year has been a step closer to excellence." />
           <div className="relative max-w-3xl mx-auto">
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-white/10 transform md:-translate-x-px" />
             {milestones.map((milestone, i) => (

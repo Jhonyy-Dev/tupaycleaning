@@ -2,7 +2,7 @@ import { ArrowDown } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { IMAGES } from '@/lib/images';
 
-const headlineWords = ['Cleaning,', 'painting', 'and', 'renovation', 'at', 'high', 'level', 'in', 'New', 'York'];
+const headlineWords = ['Premium', 'cleaning', 'for', 'homes', '&', 'businesses', 'in', 'New', 'York'];
 
 export default function Hero() {
   return (
@@ -21,7 +21,7 @@ export default function Hero() {
           <div className="opacity-0 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             <div className="h-px bg-primary-400 mb-6 md:mb-8 animate-grow-width" style={{ animationDelay: '0.2s' }} />
             <span className="inline-block text-primary-400 text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase">
-              Professional services in New York
+              Premium cleaning in NYC &amp; the tri-state area
             </span>
           </div>
 
@@ -42,9 +42,9 @@ export default function Hero() {
             className="mt-6 md:mt-8 text-base md:text-xl text-white/50 leading-relaxed max-w-2xl font-light opacity-0 animate-fade-up"
             style={{ animationDelay: '1.4s' }}
           >
-            We transform properties with deep cleaning, professional painting and
-            smart renovations. Impeccable results for property owners,
-            landlords and managers in NYC.
+            Meticulous residential, home and commercial cleaning &mdash; deep cleans, recurring
+            service, move-in/move-out, post-construction and Airbnb turnovers. Spotless,
+            guaranteed results for homeowners, landlords and property managers.
           </p>
 
           <div
@@ -65,7 +65,7 @@ export default function Hero() {
           >
             {[
               { value: '500+', label: 'Projects completed' },
-              { value: '5', label: 'NYC Boroughs' },
+              { value: '10+', label: 'Areas served' },
               { value: '100%', label: 'Satisfaction guaranteed' },
             ].map((stat, i) => (
               <div key={stat.label} className="flex items-center gap-10">

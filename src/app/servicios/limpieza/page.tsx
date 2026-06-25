@@ -8,15 +8,17 @@ import ServiceGallery from '@/components/servicios/ServiceGallery';
 import CTASection from '@/components/home/CTASection';
 
 export const metadata: Metadata = generateSEO({
-  title: 'House & Office Deep Cleaning Services NYC - Residential & Commercial',
+  title: 'House & Office Cleaning NYC & Tri-State - Residential & Commercial',
   description:
-    'Professional deep cleaning for houses, apartments, offices, and commercial spaces in New York City. Post-construction cleanup, move-out cleaning, Airbnb turnover. Serving all 5 boroughs. Free estimates — call +1 (929) 549-3683.',
+    'Professional residential and commercial cleaning for houses, apartments, offices and commercial spaces across New York and the tri-state area. Deep cleaning, recurring maid service, move-in/move-out, post-construction cleanup and Airbnb turnover. Serving all 5 NYC boroughs plus Long Island, Westchester, New Jersey, Connecticut and The Hamptons. Free estimates — call +1 (929) 549-3683.',
   path: '/servicios/limpieza',
   keywords: [
     'deep cleaning service NYC',
     'house cleaning New York',
     'office cleaning NYC',
     'commercial cleaning New York',
+    'maid service NYC',
+    'recurring cleaning service New York',
     'move out cleaning NYC',
     'post construction cleaning New York',
     'Airbnb cleaning NYC',
@@ -25,6 +27,12 @@ export const metadata: Metadata = generateSEO({
     'cleaning company Queens',
     'cleaning service Brooklyn',
     'Manhattan cleaning company',
+    'house cleaning Long Island',
+    'cleaning service Westchester',
+    'house cleaning White Plains',
+    'commercial cleaning New Jersey',
+    'cleaning service Connecticut',
+    'house cleaning The Hamptons',
     'best house cleaners NYC',
   ],
 });
@@ -101,9 +109,9 @@ const faqs = [
       'We have a guaranteed satisfaction policy. If something does not meet your expectations, we return to correct it at no additional cost within 24 hours.',
   },
   {
-    question: 'Do you cover all neighborhoods in New York?',
+    question: 'What areas do you cover?',
     answer:
-      'Yes, we operate in all five boroughs: Manhattan, Brooklyn, Queens, Bronx and Staten Island. We also cover nearby areas in New Jersey and Long Island upon consultation.',
+      'We serve all five NYC boroughs — Manhattan, Brooklyn, Queens, the Bronx and Staten Island — plus Long Island, Westchester (including White Plains), New Jersey, Connecticut and The Hamptons. If you are nearby and don\u2019t see your town listed, just ask; we likely cover it.',
   },
   {
     question: 'How do I request a quote?',

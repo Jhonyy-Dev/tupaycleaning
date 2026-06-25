@@ -11,8 +11,8 @@ export default function ServicesOverview() {
       <div className="container-wide">
         <SectionHeader
           label="Our Services"
-          title="Complete solutions for your property"
-          description="Comprehensive maintenance and improvement services for residential and commercial properties throughout the New York area."
+          title="Spotless spaces, expertly maintained"
+          description="Professional cleaning for homes and businesses is our specialty, complemented by expert painting and renovation, across New York and the tri-state area."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 rounded-3xl overflow-hidden">

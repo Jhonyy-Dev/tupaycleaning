@@ -10,7 +10,7 @@ import CTASection from '@/components/home/CTASection';
 export const metadata: Metadata = generateSEO({
   title: 'Interior & Exterior House Painting NYC - Professional Painters',
   description:
-    'Expert interior and exterior painting for houses, apartments, offices, and commercial properties in New York City. Premium paint brands, flawless finishes, free color consultation. All 5 boroughs. Call +1 (929) 549-3683.',
+    'Expert interior and exterior painting for houses, apartments, offices, and commercial properties in New York City. Premium paint brands, flawless finishes, free color consultation. Serving NYC and the tri-state area. Call +1 (929) 549-3683.',
   path: '/servicios/pintura',
   keywords: [
     'house painting NYC',

@@ -1,32 +1,25 @@
 import { MapPin } from 'lucide-react';
-
-const serviceAreas = [
-  { name: 'Manhattan', description: 'Our home base — all neighborhoods' },
-  { name: 'Brooklyn', description: 'Park Slope, Williamsburg, DUMBO & more' },
-  { name: 'Queens', description: 'Astoria, Jackson Heights, Flushing & more' },
-  { name: 'Bronx', description: 'Riverdale, Fordham, Pelham Bay & more' },
-  { name: 'Staten Island', description: 'All areas covered' },
-  { name: 'Long Island & NJ', description: 'Available upon request' },
-];
+import { SERVICE_AREAS } from '@/lib/constants';
 
 export default function MapSection() {
   return (
     <section className="section-padding bg-white/[0.02]">
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <span className="inline-block text-primary-400 text-sm font-semibold tracking-wider uppercase mb-4">
-              Our Location
+              Service Areas
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
-              Based in Manhattan, serving all of NYC
+              Cleaning across New York &amp; the Tri-State Area
             </h2>
             <p className="text-white/50 leading-relaxed mb-8">
-              Our team operates out of Manhattan and can reach any borough in New York City.
-              Whether you are in Brooklyn, Queens, the Bronx, or Staten Island — we come to you.
+              From all five NYC boroughs to Long Island, Westchester, New Jersey, Connecticut and
+              The Hamptons, our team brings the same meticulous, professional standard to every
+              home and business we clean.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {serviceAreas.map((area) => (
+              {SERVICE_AREAS.map((area) => (
                 <div
                   key={area.name}
                   className="flex items-start gap-3 p-4 rounded-xl border border-white/[0.06] bg-white/[0.02]"
@@ -39,6 +32,10 @@ export default function MapSection() {
                 </div>
               ))}
             </div>
+            <p className="text-white/30 text-xs mt-6">
+              Plus all surrounding neighborhoods and towns across the New York metro and tri-state
+              area. Not sure if we cover your location? Just ask &mdash; we likely do.
+            </p>
           </div>
 
           <div className="rounded-2xl overflow-hidden border border-white/[0.06]">
@@ -50,7 +47,7 @@ export default function MapSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="NYC Home Pro - Manhattan, New York"
+              title="Tupay Cleaning - serving New York &amp; the Tri-State Area"
               className="w-full"
             />
           </div>
